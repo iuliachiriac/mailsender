@@ -1,7 +1,7 @@
 from mailsender.app import create_app
 from mailsender.manager import create_manager
 
-app = create_app()
+app = create_app('settings.py')
 
 
 if __name__ == '__main__':
