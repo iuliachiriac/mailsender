@@ -14,9 +14,12 @@ class MailSender(object):
             if score not in app.config.get('SCORE_HTML_MAPPING'):
                 continue
             for name, email in students:
-                msg = self.compose_mail(email, name, score)
-                MailSender.mail.send(msg)
-                print 'Mail sent to {0} ({1})'.format(email, name)
+                try:
+                    msg = self.compose_mail(email, name, score)
+                    MailSender.mail.send(msg)
+                    print 'Mail sent to {0} ({1})'.format(email, name)
+                except Exception as ex:
+                    print 'Ex: {0}, mail: {1}'.format(ex, email)
 
     def compose_mail(self, recipient, name,  score):
         html = render_template(app.config.get('SCORE_HTML_MAPPING')[score],
