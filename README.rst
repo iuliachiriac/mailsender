@@ -9,8 +9,8 @@ The Project Name is Mail Sender.
 
 Description
 -----------
-This is a very simple application used to send individual e-mails using
- different templates to multiple persons based on a CSV input file.
+This is a very simple application used to send individual e-mails 
+using different templates to multiple recipients based on a CSV input file.
 
 Installation
 ------------
@@ -42,12 +42,13 @@ Usage
 
 1. You should store your recipients in a CSV file that has the following
    fields: score, name and e-mail. Store these fields' names in the
-   corresponding settings variables (SCORE_FIELD, NAME_FIELD, MAIL_FIELD).
+   corresponding settings variables 
+   (``SCORE_FIELD``, ``NAME_FIELD``, ``MAIL_FIELD``).
 
-2. Write your e-mail templates, similar to `example.html`.
+2. Write your e-mail templates, similar to ``example.html``.
 
 3. Map the e-mail templates to the scores and store them in the
-   SCORE_HTML_MAPPING variable.
+   ``SCORE_HTML_MAPPING`` variable.
 
 4. Run the management command that gets the actual work done::
 
