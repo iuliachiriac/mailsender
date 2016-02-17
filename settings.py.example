@@ -6,6 +6,10 @@ MAIL_PASSWORD = 'password'
 SENDER = 'Sender'
 SUBJECT = 'Subject'
 
+SCORE_FIELD = 'Score'
+NAME_FIELD = 'First name'
+EMAIL_FIELD = 'E-mail'
+
 SCORE_HTML_MAPPING = {
     '0': 'example.html',
 }

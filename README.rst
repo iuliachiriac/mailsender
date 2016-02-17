@@ -37,4 +37,18 @@ be run as an unprivileged user::
     mkdir -p instance
     cp settings.py.example instance/settings.py
 
-    # Follow instructions in instance/settings.py to adapt it to your needs.
+Usage
+-----
+
+1. You should store your recipients in a CSV file that has the following
+   fields: score, name and e-mail. Store these fields' names in the
+   corresponding settings variables (SCORE_FIELD, NAME_FIELD, MAIL_FIELD).
+
+2. Write your e-mail templates, similar to `example.html`.
+
+3. Map the e-mail templates to the scores and store them in the
+   SCORE_HTML_MAPPING variable.
+
+4. Run the management command that gets the actual work done::
+
+    python manage.py send_mails -f the_name_of_your_recipients_file.csv
