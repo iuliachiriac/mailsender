@@ -5,3 +5,7 @@ MAIL_PASSWORD = 'password'
 
 SENDER = 'Sender'
 SUBJECT = 'Subject'
+
+SCORE_HTML_MAPPING = {
+    '0': 'example.html',
+}
